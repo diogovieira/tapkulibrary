@@ -55,12 +55,14 @@
 	if(!(self = [super init])) return nil;
 	self.timeZone = timeZone;
 	self.sundayFirst = sundayFirst;
+    self.edgesForExtendedLayout = UIExtendedEdgeNone;
 	return self;
 }
 - (id) initWithCoder:(NSCoder *)decoder {
     if(!(self=[super initWithCoder:decoder])) return nil;
 	self.timeZone = [NSTimeZone defaultTimeZone];
 	self.sundayFirst = YES;
+    self.edgesForExtendedLayout = UIExtendedEdgeNone;
     return self;
 }
 
